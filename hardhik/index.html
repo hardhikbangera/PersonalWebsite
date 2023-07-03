@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardhik's_personel_website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo"><span>H</span>ardhik <span>S</span>urathkal</div>
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#qualification">Qualification</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div ><img  id="menu-icon" src="menu.png"></div>
+    </header>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hi! I'm Hardhik</h1>
+            
+        </div>
+        
+        <div class="info-box">
+            <div class="email-info">
+                <h3>Email:</h3>
+                <span>hardhikbangera@gmail.com</span>
+                
+            </div>
+            <div class="server-time">
+                <h4>Server Time:</h4>
+                <span id="server-time"></span>
+            </div>
+            <div class="visits-counter">
+                <h1>Total Number of Visitor:</h1>
+                <span id="visits-count"></span>
+            </div>
+        
+        </div>
+        <div class="home-image">
+            <div class="img-box">
+                <img class="bg" src="2.jpg" alt="hacker" width="800" height="550">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div  class="img about">
+            <img src="">
+            <div class="about-content">
+               
+                <h2>About me</h2>
+                <br>
+                <br>
+                <p>Hello! I'm Hardhik,a passionate and dedicated computer science student with a focus on software development.<br>
+                    Curently pursuing my Bachelor's degree in Computer Science and Engineering at St.Joseph Engineering College in Mangaluru.<br>
+                 Throught my academic journey,I have honed my programming skills in various languages including C,C++,Java,Python.</p>
+                 <div class="btn-box">
+                    <a href="#" class="btn">Read More</a>
+                 </div>
+
+                <span>
+                </span>
+            </div>
+        </div>
+
+    </section>
+    <section id="qualification">
+        <div class="main-text">
+        <h2>Educational Qualification</h2>
+        </div>
+        <div class="section-qualification">
+            <div class="qualification-box">
+                <i>  <img  class="edu-icon" src="edu.png"></i>
+                <h3> Bachelor's degree</h3>
+                <p>Bachelor of Engineering in Computer Science and Engineering<br>St.Joseph Engineering College,Mangaluru</p>
+                <div class="btn-box qualification-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                    
+                </p>
+            </div>
+            <div class="qualification-box">
+                <i>  <img  class="edu-icon" src="edu.png"></i>
+                <h3> PUC</h3>
+                <p>Sharadha PU College<br>Mangaluru</p>
+                <div class="btn-box qualification-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                    
+                </p>
+            </div>
+            <div class="qualification-box">
+                <i>  <img  class="edu-icon" src="edu.png"></i>
+                <h3> SSLC</h3>
+                <p>Holy Family School Surathkal<br>Mangaluru</p>
+                <div class="btn-box qualification-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="hobbies" class="hobbies">
+        <div class="second-text">
+        <h2>Hobbies</h2>
+        </div>
+        <div class="section-hobbies">
+            <div class="hobbies-box">
+                <i>  <img  class="hobbies-icon" src="code.png"></i>
+                <h3> Coding</h3>
+               
+            </div>
+            <div class="hobbies-box">
+            <i>  <img  class="hobbies-icon" src="read.png"></i>
+            <h3> Reading Books</h3>
+            </div>
+        </div>
+    </section>
+   
+    </section>
+    <section id="contact" class="contact">
+        <div class="main-text">
+            <h2>Contact Me</h2>
+        </div>
+        <form action="#">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Email">
+            <input type="text" placeholder="Your Address">
+            <input type="number" placeholder="Phone Number">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea> 
+            <div class="btn-box formBtn">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+        
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        let visitsCount = localStorage.getItem("visitsCount");
+        if (!visitsCount) {
+            visitsCount = 1;
+        } else {
+            visitsCount = parseInt(visitsCount) + 1;
+        }
+        localStorage.setItem("visitsCount", visitsCount);
+        document.getElementById("visits-count").textContent = visitsCount;
+    </script>
+</body>
+</html>
